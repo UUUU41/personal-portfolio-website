@@ -1,71 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio of Chandan Yadav — projects, skills and contact.">
-  <title>Chandan Yadav — Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chandan Yadav — Frontend Developer & AI Prompt Engineer</title>
+<meta name="description" content="Portfolio of Chandan Yadav — BCA student, frontend developer and AI prompt engineer from India.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="#">Chandan Yadav</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="hero">
-      <h1>Hello, I'm Chandan Yadav</h1>
-      <p>Aspiring developer building clean, useful websites and tools.</p>
-      <a class="btn" href="#projects">View my projects</a>
-      <a class="btn btn-outline" href="#contact">Get in touch</a>
-    </section>
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>I'm a student and developer who enjoys turning ideas into working web pages. I focus on clear design, readable code and projects that solve real problems.</p>
-    </section>
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Python</li><li>Git &amp; GitHub</li>
-      </ul>
-    </section>
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <article class="card">
-          <h3>Student Study Planner</h3>
-          <p>Plan subjects, tasks and deadlines in the browser.</p>
-          <a href="https://github.com/UUUU41/student-study-planner">View on GitHub</a>
-        </article>
-        <article class="card">
-          <h3>Weather App</h3>
-          <p>Current weather using the free Open-Meteo API — no API key needed.</p>
-          <a href="https://github.com/UUUU41/weather-app-js">View on GitHub</a>
-        </article>
-        <article class="card">
-          <h3>To-Do App</h3>
-          <p>A simple to-do list with add, complete and delete features.</p>
-          <a href="https://github.com/UUUU41/todo-app">View on GitHub</a>
-        </article>
-      </div>
-    </section>
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Find me on GitHub: <a href="https://github.com/UUUU41">github.com/UUUU41</a></p>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Chandan Yadav. Built with HTML, CSS and JavaScript.</p>
-  </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+<!-- ===== Navbar ===== -->
+<header class="navbar" id="navbar">
+  <a class="logo" href="#home">Chandan<span>.dev</span> 🌴</a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="hero-hi">👋 Hi, I'm</p>
+    <h1>Chandan Yadav</h1>
+    <h2 class="typing-line">I'm a <span id="typedText"></span><span class="cursor">|</span></h2>
+    <p class="hero-sub">BCA student from India who loves creating new things by combining AI tools with modern web development.</p>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="#projects">🚀 View My Projects</a>
+      <a class="btn btn-outline" href="https://github.com/UUUU41" target="_blank" rel="noopener">🐙 GitHub Profile</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>6</strong><span>Projects Built</span></div>
+      <div class="stat"><strong>3</strong><span>AI Mastery Levels</span></div>
+      <div class="stat"><strong>60/60</strong><span>Prompt Tasks Passed</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="section reveal" id="about">
+  <h2 class="section-title">🌿 About Me</h2>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>🎓 BCA Student</h3>
+      <p>Studying Bachelor of Computer Applications in India, passionate about technology and building for the web.</p>
+    </div>
+    <div class="about-card">
+      <h3>💻 Frontend Developer</h3>
+      <p>I build clean, responsive and colourful websites with HTML, CSS and JavaScript.</p>
+    </div>
+    <div class="about-card">
+      <h3>🤖 AI Prompt Engineer</h3>
+      <p>Certified Prompt Master &amp; Prompt Grandmaster — I create new things by combining AI tools with web development.</p>
+    </div>
+  </div>
+  <p class="about-quote">✨ <em>"I don't just use technology — I create new things with it."</em></p>
+</section>
+
+<!-- ===== Skills ===== -->
+<section class="section reveal" id="skills">
+  <h2 class="section-title">🛠️ My Skills</h2>
+  <div class="skills-grid">
+    <div class="skill">
+      <div class="skill-head"><span>HTML5</span><span>90%</span></div>
+      <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-head"><span>CSS3</span><span>85%</span></div>
+      <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-head"><span>JavaScript</span><span>75%</span></div>
+      <div class="skill-bar"><div class="skill-fill" data-level="75"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-head"><span>AI Prompt Engineering</span><span>95%</span></div>
+      <div class="skill-bar"><div class="skill-fill" data-level="95"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-head"><span>Python</span><span>60%</span></div>
+      <div class="skill-bar"><div class="skill-fill" data-level="60"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-head"><span>Git &amp; GitHub</span><span>70%</span></div>
+      <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Projects ===== -->
+<section class="section reveal" id="projects">
+  <h2 class="section-title">🚀 My Projects</h2>
+  <div class="projects-grid">
+    <article class="project-card">
+      <div class="project-icon">🌐</div>
+      <h3>Personal Portfolio Website</h3>
+      <p>My personal portfolio built with HTML, CSS &amp; JavaScript — the site you are looking at right now.</p>
+      <p class="tags">HTML · CSS · JavaScript</p>
+      <a class="project-link" href="https://github.com/UUUU41/personal-portfolio-website" target="_blank" rel="noopener">View on GitHub →</a>
+    </article>
+    <article class="project-card">
+      <div class="project-icon">📚</div>
+      <h3>Student Study Planner</h3>
+      <p>A study planner with subjects, due dates and priorities to help students stay organised.</p>
+      <p class="tags">HTML · CSS · JavaScript</p>
+      <a class="project-link" href="https://github.com/UUUU41/student-study-planner" target="_blank" rel="noopener">View on GitHub →</a>
+    </article>
+    <article class="project-card">
+      <div class="project-icon">💰</div>
+      <h3>Expense Tracker — Python</h3>
+      <p>A command-line expense tracker written in Python that saves your data safely to a CSV file.</p>
+      <p class="tags">Python · CSV</p>
+      <a class="project-link" href="https://github.com/UUUU41/expense-tracker-python" target="_blank" rel="noopener">View on GitHub →</a>
+    </article>
+    <article class="project-card">
+      <div class="project-icon">🌦️</div>
+      <h3>Weather App — JS</h3>
+      <p>A live weather app using the free Open-Meteo API — search any city and get real-time weather.</p>
+      <p class="tags">JavaScript · API</p>
+      <a class="project-link" href="https://github.com/UUUU41/weather-app-js" target="_blank" rel="noopener">View on GitHub →</a>
+    </article>
+    <article class="project-card">
+      <div class="project-icon">✅</div>
+      <h3>Todo App</h3>
+      <p>A clean to-do app with filters and localStorage saving, so your tasks stay even after a refresh.</p>
+      <p class="tags">HTML · CSS · JavaScript</p>
+      <a class="project-link" href="https://github.com/UUUU41/todo-app" target="_blank" rel="noopener">View on GitHub →</a>
+    </article>
+    <article class="project-card">
+      <div class="project-icon">🤖</div>
+      <h3>AI Prompt Toolkit</h3>
+      <p>A collection of 15 ready-to-use AI prompt templates for study, coding and content creation.</p>
+      <p class="tags">AI · Prompts</p>
+      <a class="project-link" href="https://github.com/UUUU41/ai-prompt-toolkit" target="_blank" rel="noopener">View on GitHub →</a>
+    </article>
+  </div>
+</section>
+
+<!-- ===== Achievements ===== -->
+<section class="section reveal" id="achievements">
+  <h2 class="section-title">🏆 Achievements</h2>
+  <div class="achieve-grid">
+    <div class="achieve-card">
+      <div class="achieve-icon">🥇</div>
+      <h3>Prompt Master</h3>
+      <p>Naukri Campus AI Prompt Mastery — Level 2: Structured Prompting, all 20 tasks passed.</p>
+    </div>
+    <div class="achieve-card">
+      <div class="achieve-icon">👑</div>
+      <h3>Prompt Grandmaster</h3>
+      <p>Naukri Campus AI Prompt Mastery — Level 3: Advanced Techniques, all 20 tasks passed.</p>
+    </div>
+    <div class="achieve-card">
+      <div class="achieve-icon">🎯</div>
+      <h3>Level 1 Completed</h3>
+      <p>Naukri Campus AI Prompt Mastery — Level 1 foundation, all tasks passed with Excellent grades.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="section reveal" id="contact">
+  <h2 class="section-title">🤝 Contact Me</h2>
+  <p class="contact-sub">Have a project idea, a question, or just want to say hello? Send me a message:</p>
+  <form class="contact-form" id="contactForm" novalidate>
+    <input type="text" id="cfName" placeholder="Your name" autocomplete="name">
+    <input type="email" id="cfEmail" placeholder="Your email" autocomplete="email">
+    <textarea id="cfMessage" rows="5" placeholder="Your message"></textarea>
+    <p class="form-error" id="formError"></p>
+    <button type="submit" class="btn btn-primary">📩 Send Message</button>
+    <p class="form-success" id="formSuccess"></p>
+  </form>
+  <p class="contact-alt">Or find me on <a href="https://github.com/UUUU41" target="_blank" rel="noopener">GitHub @UUUU41</a></p>
+</section>
+
+<footer class="footer">
+  <p>🌳 🌴 🌿 🍃 🌲 🌴 🌳 🌿 🍃 🌲 🌴 🌳 🌿 🍃 🌲 🌴 🌳</p>
+  <p>© 2026 Chandan Yadav — Learning every day, building every day.</p>
+  <button class="top-btn" id="topBtn" aria-label="Back to top">⬆</button>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
